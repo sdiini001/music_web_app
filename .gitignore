@@ -2,3 +2,18 @@ __pycache__
 .vscode
 .pytest_cache
 *venv*
+# Virtual environments
+venv/
+*venv*/
+bookstore/
+*/lib/
+*/bin/
+*/include/
+
+# Byte-compiled / cache files
+*.py[cod]
+*.class
+
+# IDE and pytest
+.vscode/
+.pytest_cache/
