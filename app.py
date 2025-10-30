@@ -1,5 +1,8 @@
 import os
 from flask import Flask, request
+from lib.database_connection import get_flask_database_connection
+from example_routes import apply_example_routes
+from lib.album_repository import AlbumRepository
 
 # Create a new Flask app
 app = Flask(__name__)
@@ -7,6 +10,7 @@ app = Flask(__name__)
 # == Your Routes Here ==
 
 # == Example Code Below ==
+# apply_example_routes(app)
 
 # GET /emoji
 # Returns a emojiy face
@@ -15,6 +19,24 @@ app = Flask(__name__)
 @app.route('/emoji', methods=['GET'])
 def get_emoji():
     return ":)"
+
+@app.route('/albums', methods=['GET'])
+def get_albums():
+    connection = get_flask_database_connection(app)
+    repository = AlbumRepository(connection)
+    return "\n".join(f'{album}' for album in repository.all())
+    
+        
+
+
+
+
+# @app.route('/albums', methods=['POST'])
+# def post_albums(id):
+#     albums = [{'title': 'Voyage', 'release_year':'2022','artist_id': '2'}]
+
+
+
 
 # This imports some more example routes for you to see how they work
 # You can delete these lines if you don't need them.
