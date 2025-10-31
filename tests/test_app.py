@@ -38,3 +38,13 @@ def test_post_albums(db_connection, web_client):
     "Album(4, Album Title 4, 1998, 3)\n" \
     "Album(5, Album Title 5, 1989, 1)\n" \
     "Album(6, Album Title 6, 1956, 2)"
+
+def test_get_artists(web_client):
+    response = web_client.get('/artists')
+    assert response.status_code == 200
+    assert response.data.decode('utf-8') == "" \
+        "Artist(1, Pixies, Rock)\n" \
+        "Artist(2, ABBA, Pop)\n" \
+        "Artist(3, Taylor Swift, Pop)\n" \
+        "Artist(4, Nina Simone, Jazz)\n" \
+        "Artist(5, Beyonce, Pop)"
