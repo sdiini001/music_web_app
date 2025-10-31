@@ -17,8 +17,8 @@ CREATE TABLE albums (
 );
 
 -- Finally, we add any records that are needed for the tests to run
-INSERT INTO albums (title, release_year, artist_id) VALUES ('Invisible Cities', 1994, 1);
-INSERT INTO albums (title, release_year, artist_id) VALUES ('The Man Who Was ThursdGK',2000, 2);
-INSERT INTO albums (title, release_year, artist_id) VALUES ('Bluets', 2003, 3);
-INSERT INTO albums (title, release_year, artist_id) VALUES ('No Place on Earth', 1998, 3);
-INSERT INTO albums (title, release_year, artist_id) VALUES ('Nevada', 1989, 1);
+INSERT INTO albums (title, release_year, artist_id) VALUES ('Album Title 1', 1994, 1);
+INSERT INTO albums (title, release_year, artist_id) VALUES ('Album Title 2',2000, 2);
+INSERT INTO albums (title, release_year, artist_id) VALUES ('Album Title 3', 2003, 3);
+INSERT INTO albums (title, release_year, artist_id) VALUES ('Album Title 4', 1998, 3);
+INSERT INTO albums (title, release_year, artist_id) VALUES ('Album Title 5', 1989, 1);
