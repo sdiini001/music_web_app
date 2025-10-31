@@ -109,7 +109,7 @@ POST /artists
   Expected response (201 Created):
 
 """
-def test_post_submit(web_client):
+def test_post_artists(web_client):
     response = web_client.post('/artists', data={'name': 'Greenday', 'genre': 'Rock'})
     assert response.status_code == 201
     assert response.data.decode('utf-8') == ""
